@@ -1,35 +1,33 @@
-# Tema: Sistema de Gestão de Biblioteca
+# Sistema de Gestão de Biblioteca
 
-## Descrição do domínio
+Trabalho avaliativo da disciplina de Padrões de Projeto, com foco
+na aplicação dos cinco padrões criacionais em um único sistema.
 
-O sistema gerencia o acervo e os empréstimos de uma biblioteca.
-Ele permite cadastrar itens do acervo, controlar exemplares,
-registrar usuários e realizar empréstimos seguindo regras
-diferentes para cada tipo de usuário.
+## Tecnologias
 
-## Entidades principais
+- TypeScript
+- Node.js
 
-- **Item do acervo**: pode ser um Livro ou uma Revista.
-- **Usuário**: pode ser Aluno ou Professor.
-- **Empréstimo**: registro de retirada de um item por um usuário,
-  com prazo de devolução e informações opcionais.
-- **Configuração da biblioteca**: dados gerais, como o nome da
-  biblioteca e o valor da multa por dia de atraso.
+## Estrutura do projeto
 
-## Funcionalidades
+    src/
+      config/        Singleton (configuração da biblioteca)
+      acervo/        Factory Method e Prototype (itens do acervo)
+      usuarios/      Abstract Factory (regras por tipo de usuário)
+      emprestimos/   Builder (montagem do empréstimo)
+      index.ts       arquivo principal
+    docs/            documentação do trabalho
 
-- Cadastrar itens do acervo de tipos diferentes;
-- Criar novas edições de uma revista a partir de uma já cadastrada;
-- Aplicar regras de prazo e multa conforme o tipo de usuário;
-- Montar e registrar empréstimos;
-- Consultar a configuração geral da biblioteca.
+## Documentação
 
-## Planejamento dos padrões
+- [Tema do sistema](docs/TEMA.md)
+- [Padrões aplicados](docs/PADROES.md)
 
-| Padrão           | Onde será usado                                  |
-|------------------|--------------------------------------------------|
-| Singleton        | Configuração geral da biblioteca                 |
-| Factory Method   | Cadastro dos tipos de item (Livro e Revista)     |
-| Abstract Factory | Regras de empréstimo e multa por tipo de usuário |
-| Builder          | Montagem do objeto Empréstimo                    |
-| Prototype        | Criação de novas edições por clonagem            |
+## Como executar
+
+    npm install
+    npm start
+
+## Autora
+
+Talita Gabriela Del Poso Vilalva, TADS 04.

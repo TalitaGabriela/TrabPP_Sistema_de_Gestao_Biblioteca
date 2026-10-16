@@ -1,5 +1,5 @@
 {
-  "name": "design-patterns-typescript",
+  "name": "sistema_gestao_biblioteca",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Talita Gabriela Del Poso Vilalva",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^14.6.0",
